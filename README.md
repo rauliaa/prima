@@ -1,11 +1,7 @@
 ## Akses Admin:
 - Username : admin
-- password : indonesia
+- password : admin123
 
 ## Akses Petugas:
 - Username : petugas
-- password : petugas
-
-## Akses User:
-- Username : user
-- password : user1234
+- password : petugas123
