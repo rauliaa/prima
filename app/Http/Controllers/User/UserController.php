@@ -206,10 +206,10 @@ class UserController extends Controller
 
 
         if ($request->file('foto')) {
-            $data['foto'] = $request->file('foto')->store('assets/pengaduan', 'public');
+            $data['foto'] = $request->file('foto')->store('asset/pengaduan', 'public');
         }
 
-        date_default_timezone_set('Asia/Bangkok');
+        date_default_timezone_set('Asia/Jakarta');
 
         $pengaduan = Pengaduan::create([
             'tgl_pengaduan' => date('Y-m-d h:i:s'),
@@ -219,7 +219,7 @@ class UserController extends Controller
             'tgl_kejadian' => $data['tgl_kejadian'],
             'lokasi_kejadian' => $data['lokasi_kejadian'],
             // 'id_kategori' => $data['id_kategori'],
-            'foto' => $data['foto'] ?? 'assets/pengaduan/tambakmekar.png',
+            'foto' => $data['foto'] ?? 'asset/pengaduan/tambakmekar.png',
             'status' => '0',
         ]);
 
